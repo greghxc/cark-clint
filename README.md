@@ -13,7 +13,7 @@ Create an account (or test account) with FlightStats. Create an AppKey and AppId
 
 Start the application by navigating to the project folder and running:
 ```
-mvn spring-boot:run -Drun.arguments=--flightStats.appId=your_app_id,flightStats.appKey=your_app_key
+mvn spring-boot:run -Drun.arguments=--flightStats.appId=your_app_id,--flightStats.appKey=your_app_key
 ```
 
 Once running, visit the Swagger docs at: [http://localhost:8080/v1](http://localhost:8080/v1)
