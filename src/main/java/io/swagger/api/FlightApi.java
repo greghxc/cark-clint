@@ -34,7 +34,6 @@ public interface FlightApi {
         @ApiResponse(code = 405, message = "Invalid input", response = ErrorResponse.class) })
     @RequestMapping(value = "/flight",
         produces = { "application/json" }, 
-        consumes = { "application/json" },
         method = RequestMethod.GET)
     ResponseEntity<Flight> getFlight(@NotNull @ApiParam(value = "IATA code for airline (e.g. AA, AL)", required = true) @Valid @RequestParam(value = "airline", required = true) String airline,@NotNull @ApiParam(value = "Flight number (e.g. 400)", required = true) @Valid @RequestParam(value = "flightno", required = true) String flightno,@NotNull @ApiParam(value = "Arrival airport (e.g. SEA, SFO)", required = true) @Valid @RequestParam(value = "airport", required = true) String airport,@NotNull @ApiParam(value = "Arrival date ISO8601 in local time (e.g. 20180214)", required = true) @Valid @RequestParam(value = "date", required = true) String date);
 
