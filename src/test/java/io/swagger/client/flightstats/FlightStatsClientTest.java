@@ -12,7 +12,9 @@ import static org.junit.Assert.*;
 public class FlightStatsClientTest {
     @Test
     public void lookupFlight() throws Exception {
-        FlightStatsClient client = new FlightStatsClient();
+        String apiKey = "";
+        String apiId = "";
+        FlightStatsClient client = new FlightStatsClient(apiId, apiKey);
         LocalDate arrivalDate = LocalDate.of(2018, 8, 17);
 
         Flight flight = client.lookupFlight("AS", "15", "SEA", arrivalDate);

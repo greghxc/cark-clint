@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfiguration {
     @Value("${flightStats.appId}")
     private String appId;
-    @Value("$(flightStats.appKey")
+    @Value("${flightStats.appKey}")
     private String appKey;
 
     @Bean
