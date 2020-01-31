@@ -1,0 +1,9 @@
+version: '3'
+services:
+  carkclint:
+    image: docker-registry.hacksy.io/cark-clint:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - FLIGHTSTATS_APPID=7ed53c2e
+      - FLIGHTSTATS_APPKEY=e88209b6fbc9dc7e9babd8440dd7837e

@@ -2,7 +2,7 @@
 It's a bird! No, it's a plane! Yes, it is a plane!
 
 ## Overview
-An abstract service to normalize flight data retrieved from multiple API endpoints or, potentially, services. Currently the only implmentation is agains the FlightStats flex API.
+An abstract service to standardize flight data retrieved from multiple API endpoints or, potentially, services. Currently the only implmentation is against the FlightStats flex API.
 
 This server was initially generated as a stub by the [swagger-codegen](https://github.com/swagger-api/swagger-codegen) project from an [OpenAPI specification](https://github.com/swagger-api/swagger-core).
 
@@ -30,6 +30,12 @@ curl -X GET --header 'Accept: application/json' 'http://localhost:8080/v1/flight
   "status": "Landed"
 }
 ```
+## Provider Implementation Notes
+
+### Flight Stats
+Flight stats provides multiple API's endpoints for flight lookups: one for looking up scheduled flights more than three days in advance, and another for flights less than three days in advance that includes tracking and flight status.
+
+This application chooses which API to call based on the flight date, and returns a standard payload with a single chema.
 
 ## Requirements
 * Java 8
